@@ -6,11 +6,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 export default function App() {
-  const theme = Themes.purple;
+  const theme = Themes.green;
 
   return (
- <SafeAreaView style={{ flex: 1 }}>
-    <View style={[styles.container, {backgroundColor: theme.background,  paddingHorizontal: 20 }]}>
+ <SafeAreaView style={{ flex: 1}}>
+    <View style={[styles.container, {backgroundColor: theme.background, paddingHorizontal: 20, paddingTop: 45}]}>
       <Text style={{ color: theme.text, marginBottom: 20 }}>
         Testar Purple Theme
       </Text>
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
 });
