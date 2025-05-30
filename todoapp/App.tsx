@@ -2,16 +2,18 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CustomButton from './components/Button'; 
 import Themes from './constants/Themes';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 export default function App() {
   const theme = Themes.purple;
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
+ <SafeAreaView style={{ flex: 1 }}>
+    <View style={[styles.container, {backgroundColor: theme.background,  paddingHorizontal: 20 }]}>
       <Text style={{ color: theme.text, marginBottom: 20 }}>
         Testar Purple Theme
       </Text>
-
       <CustomButton
         title="Ny Uppgift"
         backgroundColor={theme.buttonBackground}
@@ -20,6 +22,7 @@ export default function App() {
         onPress={() => ('')}
       />
     </View>
+    </SafeAreaView>
   );
 }
 

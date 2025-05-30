@@ -18,7 +18,7 @@ export default function CustomButton({
   onPress = () => {},
 }: Props) {
   return (
-    <View style={styles.container}>
+    <View style={styles.outerContainer}>
       <FontAwesome.Button
         name="plus"
         backgroundColor={backgroundColor}
@@ -34,13 +34,12 @@ export default function CustomButton({
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
+  outerContainer: {
+    width: '100%'
   },
   button: {
-    width: 350,
-    height: 60,
     justifyContent: 'center',
+    height: 60,
+    width: '100%'
   },
 });
