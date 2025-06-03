@@ -33,7 +33,7 @@ export default function TaskCard({
       <View style={styles.headerRow}>
         <FontAwesome
           name={completed ? 'check-square' : 'square-o'}
-          size={30}
+          size={35}
           color={completed ? '#888' : '#888'}
           onPress={onToggleComplete}
           style={styles.checkboxIcon}
@@ -46,13 +46,14 @@ export default function TaskCard({
         
           <FontAwesome
             name={isFavorite ? 'star' : 'star-o'}
-            size={30}
+            size={32}
             color="#888"
             onPress={onToggleFavorite}
             style={styles.favoriteIcon}
           />
         </View>
       </View>
+ 
       <View style={styles.down}>
         <Text style={{ color: 'red', fontSize: 12 }}>
           <FontAwesome name="clock-o" size={12} color="red" />
@@ -81,20 +82,20 @@ const styles = StyleSheet.create({
   completed: {
     opacity: 0.6,
   },
-  headerRow: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
-    marginBottom: 8,
-  },
+headerRow: {
+  flexDirection: 'row',
+  alignItems: 'center', 
+  justifyContent: 'space-between',
+  marginBottom: 6,
+},
   checkboxIcon: {
-    marginRight: 10,
+    marginRight: 15,
     marginTop: 4,
   },
   textContent: {
     flex: 1,
-    marginRight:5,
     marginLeft:5,
+    marginRight:5,
   },
   title: {
     fontSize: 16,
@@ -113,10 +114,7 @@ const styles = StyleSheet.create({
   },
   listName: {
     fontSize: 12,
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 4,
-    color: '#444',
+    marginBottom:5
   },
   favoriteIcon: {
     marginTop: 4,
@@ -124,6 +122,7 @@ const styles = StyleSheet.create({
   down: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingVertical: 6,
   },
   meta: {
     fontSize: 12,

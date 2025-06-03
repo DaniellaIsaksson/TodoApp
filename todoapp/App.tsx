@@ -16,13 +16,13 @@ export default function App() {
         Testar Purple Theme
       </Text>
       <TaskCard
-  title="Lämna in uppsats"
+  title="Lucas födelsedag"
   listName='Att göra'
-  description="Köpa presenter till Lucas och Elias."
+  description="Köpa presenter, handla mat, beställa tårta och skicka önskelista till familjen."
   created={new Date('2025-05-30T10:00:00')}
   estimated={new Date('2025-06-02T23:59:00')}
   completed={false}
-  isFavorite={false}
+  isFavorite={true}
 />
       <CustomButton
         title="Ny Uppgift"
