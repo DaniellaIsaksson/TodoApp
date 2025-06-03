@@ -11,16 +11,18 @@ export default function App() {
 
   return (
  <SafeAreaView style={{ flex: 1}}>
-    <View style={[styles.container, {backgroundColor: theme.background, paddingHorizontal: 20, paddingTop: 45}]}>
+    <View style={[styles.container, {backgroundColor: theme.background, paddingHorizontal: 10, paddingTop: 45}]}>
       <Text style={{ color: theme.text, marginBottom: 20 }}>
         Testar Purple Theme
       </Text>
       <TaskCard
   title="Lämna in uppsats"
-  description="Max 1000 ord, via lärplattformen"
+  listName='Att göra'
+  description="Köpa presenter till Lucas och Elias."
   created={new Date('2025-05-30T10:00:00')}
   estimated={new Date('2025-06-02T23:59:00')}
   completed={false}
+  isFavorite={false}
 />
       <CustomButton
         title="Ny Uppgift"

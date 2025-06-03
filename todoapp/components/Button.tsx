@@ -35,7 +35,11 @@ export default function CustomButton({
 
 const styles = StyleSheet.create({
   outerContainer: {
-    width: '100%'
+    width: '100%',
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
   },
   button: {
     justifyContent: 'center',
