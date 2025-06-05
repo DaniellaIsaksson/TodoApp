@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import CustomButton from './components/Button'; 
+import CustomButton from './components/reusable/Button'; 
 import Themes from './constants/Themes';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import TaskCard from './components/TaskCard';
+import TaskCard from './components/reusable/TaskCard';
+import CustomTextInput from './components/reusable/TextInput';
 
 
 export default function App() {
   const theme = Themes.purple;
+  const [description, setDescription] = useState('');
 
   return (
  <SafeAreaView style={{ flex: 1}}>
@@ -22,7 +24,7 @@ export default function App() {
   created={new Date('2025-05-30T10:00:00')}
   estimated={new Date('2025-06-02T23:59:00')}
   completed={false}
-  isFavorite={true}
+  isFavorite={false}
 />
       <CustomButton
         title="Ny Uppgift"
@@ -31,6 +33,13 @@ export default function App() {
         textColor={theme.buttonText}
         onPress={() => ('')}
       />
+      <CustomTextInput
+  label="Titel"
+  multiline
+  placeholder="Skriv en titel på listan.."
+  value={description}
+  onChangeText={setDescription}
+/>
     </View>
     </SafeAreaView>
   );
@@ -39,7 +48,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent: 'flex-start',
   },
 });
