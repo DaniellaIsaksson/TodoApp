@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#fff',
     borderRadius: 5,
-    padding: 16,
-    paddingBottom: 5,
+    padding: 10,
+    paddingBottom: 0,
     marginBottom: 12,
     shadowColor: '#000',
     shadowOpacity: 0.1,

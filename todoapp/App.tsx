@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CustomButton from './components/reusable/Button'; 
 import Themes from './constants/Themes';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import TaskCard from './components/reusable/TaskCard';
 import CustomTextInput from './components/reusable/TextInput';
 
@@ -12,8 +12,8 @@ export default function App() {
   const [description, setDescription] = useState('');
 
   return (
+  <SafeAreaProvider style={[styles.container, {backgroundColor: theme.background, paddingHorizontal: 10}]}>
  <SafeAreaView style={{ flex: 1}}>
-    <View style={[styles.container, {backgroundColor: theme.background, paddingHorizontal: 10, paddingTop: 45}]}>
       <Text style={{ color: theme.text, marginBottom: 20 }}>
         Testar Purple Theme
       </Text>
@@ -40,8 +40,8 @@ export default function App() {
   value={description}
   onChangeText={setDescription}
 />
-    </View>
     </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
